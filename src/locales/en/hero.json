@@ -1,6 +1,22 @@
 {
-  "title": "Sample headline for your business",
-  "subtitle": "Sample supporting text that states the promise in one sentence.",
-  "cta_primary": "Request a quote",
-  "cta_secondary": "See the demo"
+  "eyebrow": "Bilingual websites for Hialeah businesses",
+  "title": "Answer every customer in Spanish or English, even when you're busy.",
+  "subtitle": "You talk to me, and I build it myself. Written first in Spanish, not translated. Everything stays in your name: domain, page and accounts.",
+  "cta_primary": "See your page before you pay",
+  "cta_secondary": "Free check of your site and Google",
+  "cta_note": "Free first draft in 48 hours. $0 until you approve it.",
+  "trust": "I'm an engineer and I build it myself. Bilingual, from Miami. No middlemen.",
+  "card_label": "Price and process",
+  "price_label": "Founding price, first 5 clients",
+  "price_founding": "$300",
+  "price_regular_prefix": "regular price",
+  "price_regular": "$400",
+  "price_note": "Fixed price, published here. In exchange, your honest feedback and permission to show the work.",
+  "step1_title": "Tell me about your business",
+  "step1_text": "One short message. I draft your page in 48 hours, free.",
+  "step2_title": "You look and decide",
+  "step2_text": "If you don't like it, you pay nothing.",
+  "step3_title": "Approve and pay",
+  "step3_text": "$100 deposit on approval. The balance at launch.",
+  "honest": "I'm taking my first 5 clients. I don't have reviews yet. That's why you only pay after you approve."
 }

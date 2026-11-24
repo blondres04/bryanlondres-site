@@ -1,6 +1,22 @@
 {
-  "title": "Título principal de ejemplo para tu negocio",
-  "subtitle": "Texto de apoyo de ejemplo que explica la promesa en una frase.",
-  "cta_primary": "Pedir presupuesto",
-  "cta_secondary": "Ver demo"
+  "eyebrow": "Páginas web bilingües para negocios de Hialeah",
+  "title": "Responda a cada cliente en español o inglés, aunque esté ocupado.",
+  "subtitle": "Usted habla conmigo, y yo mismo lo construyo. Escrito primero en español, no traducido. Todo queda a su nombre: dominio, página y cuentas.",
+  "cta_primary": "Vea su página antes de pagar",
+  "cta_secondary": "Revisión gratis de su web y Google",
+  "cta_note": "Primer borrador gratis en 48 horas. $0 hasta que usted lo apruebe.",
+  "trust": "Soy ingeniero y lo construyo yo mismo. Bilingüe, de Miami. Sin intermediarios.",
+  "card_label": "Precio y proceso",
+  "price_label": "Precio fundador, primeros 5 clientes",
+  "price_founding": "$300",
+  "price_regular_prefix": "precio regular",
+  "price_regular": "$400",
+  "price_note": "Precio fijo, publicado aquí. A cambio, su opinión sincera y permiso para mostrar el trabajo.",
+  "step1_title": "Cuénteme de su negocio",
+  "step1_text": "Un mensaje corto. Hago el borrador de su página en 48 horas, gratis.",
+  "step2_title": "Usted lo ve y decide",
+  "step2_text": "Si no le gusta, no paga nada.",
+  "step3_title": "Aprueba y paga",
+  "step3_text": "Depósito de $100 al aprobar. El resto al publicar.",
+  "honest": "Estoy tomando mis primeros 5 clientes. Aún no tengo reseñas. Por eso solo paga después de aprobar."
 }
