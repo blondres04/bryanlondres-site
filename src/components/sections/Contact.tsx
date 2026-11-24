@@ -2,15 +2,20 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useLocale, useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { submitIntake } from '@/app/actions/intake';
+import { buttonClasses, Container, SectionHeading } from '@/components/ui';
 import type { IntakeInput } from '@/validations/IntakeValidation';
 import { IntakeValidation, PREFERRED_LANGUAGES } from '@/validations/IntakeValidation';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
-const inputClass = 'mt-1 w-full rounded-lg border border-line px-3 py-2 focus:border-brand';
+const EMAIL = 'bryanlondres5@gmail.com';
+
+const inputClass =
+  'mt-1.5 block min-h-12 w-full rounded-xl border-2 border-line bg-card px-4 py-3 text-base text-ink focus:border-bay focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bay aria-[invalid=true]:border-brand';
+const labelClass = 'block text-base font-semibold text-ink';
 
 /**
  * Netlify Forms only detects forms present in static HTML at deploy time, so the real
@@ -34,10 +39,31 @@ const postToNetlifyForms = async (values: IntakeInput) => {
   }
 };
 
+const fields = [
+  { name: 'name', type: 'text', autoComplete: 'name', inputMode: undefined, hint: false },
+  {
+    name: 'business',
+    type: 'text',
+    autoComplete: 'organization',
+    inputMode: undefined,
+    hint: true,
+  },
+  { name: 'phone', type: 'tel', autoComplete: 'tel', inputMode: 'tel', hint: true },
+  { name: 'email', type: 'email', autoComplete: 'email', inputMode: 'email', hint: false },
+] as const;
+
 export const Contact = () => {
   const t = useTranslations('contact');
   const locale = useLocale();
   const [status, setStatus] = useState<Status>('idle');
+  const successRef = useRef<HTMLDivElement>(null);
+  const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(t('email_subject'))}`;
+
+  useEffect(() => {
+    if (status === 'success') {
+      successRef.current?.focus();
+    }
+  }, [status]);
 
   const {
     register,
@@ -76,86 +102,184 @@ export const Contact = () => {
     }
   });
 
-  const fields = [
-    ['name', 'text', 'name'],
-    ['business', 'text', 'organization'],
-    ['phone', 'tel', 'tel'],
-    ['email', 'email', 'email'],
-  ] as const;
+  const hasErrors = Object.keys(errors).length > 0;
 
   return (
-    <section id="contact" className="mx-auto max-w-2xl px-4 py-16">
-      <h2 className="text-3xl font-bold">{t('title')}</h2>
-      <p className="mt-2 text-muted">{t('intro')}</p>
-
-      <form onSubmit={onSubmit} noValidate className="mt-6 space-y-4">
-        {fields.map(([name, type, autoComplete]) => (
-          <label key={name} className="block text-sm font-medium">
-            {t(name)}
-            <input
-              {...register(name)}
-              type={type}
-              autoComplete={autoComplete}
-              aria-invalid={errors[name] ? 'true' : undefined}
-              className={inputClass}
-            />
-            {errors[name] && (
-              <span role="alert" className="text-sm text-red-600">
-                {t('error_invalid')}
-              </span>
-            )}
-          </label>
-        ))}
-
-        <label className="block text-sm font-medium">
-          {t('message')}
-          <textarea
-            {...register('message')}
-            rows={5}
-            aria-invalid={errors.message ? 'true' : undefined}
-            className={inputClass}
-          />
-          {errors.message && (
-            <span role="alert" className="text-sm text-red-600">
-              {t('error_invalid')}
-            </span>
-          )}
-        </label>
-
-        <label className="block text-sm font-medium">
-          {t('preferred_language')}
-          <select {...register('preferredLanguage')} className={inputClass}>
-            {PREFERRED_LANGUAGES.map((lang) => (
-              <option key={lang} value={lang}>
-                {t(`language_${lang}`)}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        {/* Honeypot, hidden from people and assistive tech. Bots fill it; the server drops them. */}
-        <div aria-hidden="true" className="hidden">
-          <label>
-            Leave empty
-            <input {...register('botField')} type="text" tabIndex={-1} autoComplete="off" />
-          </label>
-        </div>
-
-        <button
-          type="submit"
-          disabled={status === 'sending'}
-          className="rounded-full bg-brand px-6 py-3 font-semibold text-white hover:bg-brand-dark disabled:opacity-60"
-        >
-          {status === 'sending' ? t('sending') : t('submit')}
-        </button>
-
-        {status === 'success' && <output className="block text-brand">{t('success')}</output>}
-        {status === 'error' && (
-          <p role="alert" className="text-red-600">
-            {t('error_generic')}
+    <section
+      id="contact"
+      data-section="contact"
+      className="scroll-mt-16 bg-paper-2 py-16 sm:py-24"
+    >
+      <Container>
+        <div className="mx-auto max-w-2xl">
+          <SectionHeading eyebrow={t('eyebrow')} title={t('title')} intro={t('intro')} />
+          <p className="mt-4 inline-block rounded-full bg-bay-soft px-4 py-1.5 text-sm font-semibold text-bay">
+            {t('promise')}
           </p>
-        )}
-      </form>
+
+          <p className="mt-3 text-sm text-muted">{t('founding')}</p>
+
+          <ol className="mt-6 grid gap-3 sm:grid-cols-3">
+            {(['step1', 'step2', 'step3'] as const).map((k, i) => (
+              <li
+                key={k}
+                className="flex items-start gap-3 rounded-xl border border-line bg-card p-4 text-sm text-ink"
+              >
+                <span
+                  aria-hidden="true"
+                  className="flex size-7 shrink-0 items-center justify-center rounded-full bg-bay text-sm font-bold text-white"
+                >
+                  {i + 1}
+                </span>
+                <span>{t(k)}</span>
+              </li>
+            ))}
+          </ol>
+
+          {status === 'success' ? (
+            <div
+              ref={successRef}
+              tabIndex={-1}
+              role="status"
+              className="mt-8 scroll-mt-24 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bay rounded-(--radius-card) border-2 border-bay bg-card p-6 shadow-card"
+            >
+              <p className="font-display text-2xl font-semibold text-bay">{t('success_title')}</p>
+              <p className="mt-2 text-ink">{t('success')}</p>
+              <p className="mt-3 text-sm text-muted">
+                {t('success_email')}{' '}
+                <a href={mailto} className="font-semibold text-brand underline underline-offset-4">
+                  {EMAIL}
+                </a>
+              </p>
+            </div>
+          ) : (
+            <form
+              onSubmit={onSubmit}
+              noValidate
+              aria-busy={status === 'sending'}
+              className="mt-8 space-y-5 rounded-(--radius-card) border border-line bg-card p-5 shadow-card sm:p-8"
+            >
+              {hasErrors && (
+                <p role="alert" className="font-semibold text-brand">
+                  {t('error_invalid')}
+                </p>
+              )}
+
+              {fields.map(({ name, type, autoComplete, inputMode, hint }) => {
+                const hintId = `${name}-hint`;
+                const errId = `${name}-err`;
+                return (
+                  <div key={name}>
+                    <label htmlFor={`f-${name}`} className={labelClass}>
+                      {t(name)}
+                    </label>
+                    <input
+                      id={`f-${name}`}
+                      {...register(name)}
+                      type={type}
+                      autoComplete={autoComplete}
+                      inputMode={inputMode}
+                      enterKeyHint="next"
+                      autoCapitalize={type === 'email' ? 'none' : undefined}
+                      aria-required="true"
+                      aria-invalid={errors[name] ? 'true' : undefined}
+                      aria-describedby={
+                        [hint ? hintId : null, errors[name] ? errId : null]
+                          .filter(Boolean)
+                          .join(' ') || undefined
+                      }
+                      className={inputClass}
+                    />
+                    {hint && (
+                      <p id={hintId} className="mt-1 text-sm text-muted">
+                        {t(`${name}_hint`)}
+                      </p>
+                    )}
+                    {errors[name] && (
+                      <p id={errId} className="mt-1 text-sm font-semibold text-brand">
+                        {t(`error_${name}`)}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+
+              <div>
+                <label htmlFor="f-message" className={labelClass}>
+                  {t('message')}
+                </label>
+                <textarea
+                  id="f-message"
+                  {...register('message')}
+                  rows={4}
+                  autoComplete="off"
+                  enterKeyHint="send"
+                  aria-required="true"
+                  aria-invalid={errors.message ? 'true' : undefined}
+                  aria-describedby={errors.message ? 'message-err message-hint' : 'message-hint'}
+                  className={inputClass}
+                />
+                <p id="message-hint" className="mt-1 text-sm text-muted">
+                  {t('message_hint')}
+                </p>
+                {errors.message && (
+                  <p id="message-err" className="mt-1 text-sm font-semibold text-brand">
+                    {t('error_message')}
+                  </p>
+                )}
+              </div>
+
+              <div>
+                <label htmlFor="f-lang" className={labelClass}>
+                  {t('preferred_language')}
+                </label>
+                <select id="f-lang" {...register('preferredLanguage')} className={inputClass}>
+                  {PREFERRED_LANGUAGES.map((lang) => (
+                    <option key={lang} value={lang}>
+                      {t(`language_${lang}`)}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Honeypot, hidden from people and assistive tech. Bots fill it; the server drops them. */}
+              <div aria-hidden="true" className="hidden">
+                <label>
+                  Leave empty
+                  <input {...register('botField')} type="text" tabIndex={-1} autoComplete="off" />
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                disabled={status === 'sending'}
+                className={`${buttonClasses('primary', 'lg')} w-full cursor-pointer disabled:opacity-60`}
+              >
+                {status === 'sending' ? t('sending') : t('submit')}
+              </button>
+
+              {status === 'error' && (
+                <p role="alert" className="font-semibold text-brand">
+                  {t('error_generic')}
+                </p>
+              )}
+
+              <p className="text-sm text-muted">{t('fine_print')}</p>
+              <p className="text-sm text-muted">{t('privacy')}</p>
+            </form>
+          )}
+
+          <p className="mt-6 text-base text-ink">
+            {t('email_prompt')}{' '}
+            <a
+              href={mailto}
+              className="font-semibold text-brand underline underline-offset-4 hover:text-brand-dark"
+            >
+              {t('email_link')}
+            </a>
+          </p>
+        </div>
+      </Container>
     </section>
   );
 };

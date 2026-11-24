@@ -1,6 +1,18 @@
 {
-  "title": "The problem",
-  "p1": "Sample content: the first customer pain.",
-  "p2": "Sample content: the second customer pain.",
-  "p3": "Sample content: the third customer pain."
+  "eyebrow": "What happens today",
+  "title": "Every customer you don't answer goes to someone else.",
+  "intro": "Your hands are full: cutting, installing, serving. The customer does not wait: they call the next business on the list. This is what tends to happen at a Hialeah business.",
+  "calls_scene": "You're busy",
+  "calls_title": "The phone rings and you can't pick up",
+  "calls_body": "You're with a client in the chair, or up on a roof. The call is missed and nobody leaves a message. Someone shopping for a service calls several places; the one who answers first gets the job.",
+  "calls_cost": "A missed call is a customer who doesn't call back.",
+  "phone_scene": "The customer is on their phone",
+  "phone_title": "Your site doesn't work well on a phone",
+  "phone_body": "Tiny text, buttons that don't respond, or a page that takes a while to open. Most people look you up on their phone, on the street or on the couch. If it's hard to read, they leave.",
+  "phone_cost": "If it doesn't work on a phone, they never get as far as calling you.",
+  "language_scene": "They speak Spanish, or English",
+  "language_title": "No Spanish, or no easy way to write to you",
+  "language_body": "In Hialeah some customers ask for everything in Spanish and others in English. If your page is in one language, or has no form and no clear way to ask for a price, many are left not knowing how to reach you.",
+  "language_cost": "Someone who can't follow the page, or can't find how to write to you, doesn't contact you.",
+  "bridge": "You don't need to learn any technology. I build your page, in Spanish and English, with a form that alerts you when someone writes. And you see it before you pay."
 }

@@ -53,3 +53,8 @@ h3 {
     scroll-behavior: auto;
   }
 }
+
+/* Hide the Next.js dev indicator badge (dev only). */
+nextjs-portal {
+  display: none !important;
+}

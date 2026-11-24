@@ -1,6 +1,18 @@
 {
-  "title": "El problema",
-  "p1": "Contenido de ejemplo: el primer dolor del cliente.",
-  "p2": "Contenido de ejemplo: el segundo dolor del cliente.",
-  "p3": "Contenido de ejemplo: el tercer dolor del cliente."
+  "eyebrow": "Lo que pasa hoy",
+  "title": "Cada cliente que no le contestan, se lo lleva otro.",
+  "intro": "Usted está con las manos ocupadas: cortando, instalando, atendiendo. El cliente no espera: llama al siguiente negocio de la lista. Esto es lo que suele pasar en un negocio de Hialeah.",
+  "calls_scene": "Usted está ocupado",
+  "calls_title": "Suena el teléfono y no puede contestar",
+  "calls_body": "Está con una clienta en la silla, o arriba en un techo. La llamada se pierde y nadie le deja mensaje. Quien busca un servicio llama a varios; el que contesta primero se queda con el trabajo.",
+  "calls_cost": "Una llamada perdida es un cliente que no vuelve a llamar.",
+  "phone_scene": "El cliente está en su celular",
+  "phone_title": "Su página no se ve bien en el teléfono",
+  "phone_body": "Letras diminutas, botones que no responden, o una página que tarda en abrir. Casi todo el mundo le busca desde el celular, en la calle o en el sofá. Si cuesta leerla, se van.",
+  "phone_cost": "Si no se ve bien en el celular, ni siquiera llegan a llamarle.",
+  "language_scene": "Habla español, o inglés",
+  "language_title": "Sin español, o sin una forma fácil de escribirle",
+  "language_body": "En Hialeah unos clientes piden todo en español y otros en inglés. Si su página está en un solo idioma, o no tiene formulario ni una forma clara de pedir un precio, muchos se quedan sin saber cómo escribirle.",
+  "language_cost": "Quien no entiende la página, o no encuentra cómo escribirle, no le contacta.",
+  "bridge": "No hace falta que usted aprenda nada de tecnología. Yo hago su página, en español y en inglés, con un formulario que le avisa cuando alguien le escribe. Y la ve antes de pagar."
 }

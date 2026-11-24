@@ -11,12 +11,13 @@
   "price_founding": "$300",
   "price_regular_prefix": "precio regular",
   "price_regular": "$400",
-  "price_note": "Precio fijo, publicado aquí. A cambio, su opinión sincera y permiso para mostrar el trabajo.",
+  "price_note": "Precio fijo, publicado aquí. Cuando tome mis 5 primeros clientes, el precio pasa a $400. Si usted empieza antes, su $300 queda fijo. A cambio, su opinión sincera y permiso para mostrar el trabajo.",
   "step1_title": "Cuénteme de su negocio",
   "step1_text": "Un mensaje corto. Hago el borrador de su página en 48 horas, gratis.",
   "step2_title": "Usted lo ve y decide",
   "step2_text": "Si no le gusta, no paga nada.",
   "step3_title": "Aprueba y paga",
   "step3_text": "Depósito de $100 al aprobar. El resto al publicar.",
-  "honest": "Estoy tomando mis primeros 5 clientes. Aún no tengo reseñas. Por eso solo paga después de aprobar."
+  "honest": "Estoy tomando mis primeros 5 clientes. Aún no tengo reseñas. Por eso solo paga después de aprobar.",
+  "price_chip": "Fundador, primeros 5 clientes. Después, $400."
 }

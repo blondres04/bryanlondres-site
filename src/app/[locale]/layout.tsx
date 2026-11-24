@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Fraunces, Figtree } from 'next/font/google';
+import { Figtree, Fraunces } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { routing } from '@/libs/I18nRouting';
 import { getBaseUrl, getRobotsMetadata } from '@/utils/Helpers';
@@ -46,8 +46,8 @@ export async function generateMetadata(props: {
 
 export const viewport: Viewport = {
   width: 'device-width',
-  themeColor: '#fff8ee',
   initialScale: 1,
+  themeColor: '#fff8ee',
 };
 
 export function generateStaticParams() {

@@ -1,4 +1,26 @@
 {
-  "title": "About",
-  "body": "Sample text about who I am and why you can trust me."
+  "eyebrow": "Who I am",
+  "title": "You talk to me, and I build it myself",
+  "place": "Miami, Florida",
+  "p1": "I'm Bryan Londres, an engineer from Miami. I'm the first engineer in my family and I graduated in Computer Science from FIU in 2026. I speak Spanish and English, so your site is written in both from the start, not translated afterward.",
+  "p2": "At work I maintain production software that a company uses every day and run its cloud. I also build AI systems and test them so they don't say things they shouldn't. I bring the same care to your site: I build it, and you never have to explain anything to a middleman.",
+  "honest_badge": "No fine print",
+  "honest": "I'm taking my first 5 clients. I don't have reviews yet. That's why you only pay after you approve your first draft.",
+  "fact1_title": "Engineer by trade",
+  "fact1_text": "Team lead. I build with Claude, AI with safety tests, and software people use every day.",
+  "fact2_title": "FIU graduate",
+  "fact2_text": "Computer Science, 2026.",
+  "fact3_title": "First generation",
+  "fact3_text": "I helped Hispanic Computer Science students find their way in.",
+  "fact4_title": "Bilingual",
+  "fact4_text": "Spanish first, English with the same care.",
+  "linkedin_aria": "Bryan Londres on LinkedIn, opens in a new tab",
+  "github_aria": "Bryan Londres on GitHub, opens in a new tab",
+  "email_label": "Email me",
+  "role": "AI and software engineer",
+  "honest_1": "Founding price for those 5: $300 instead of $400.",
+  "honest_2": "I build your first draft for free, in 48 hours, using your own business.",
+  "honest_3": "You pay $100 only after you approve it. If you don't like it, you owe nothing.",
+  "check_title": "Check me yourself",
+  "check_text": "Everything I say here can be verified. Look at my LinkedIn and my GitHub before you write to me."
 }

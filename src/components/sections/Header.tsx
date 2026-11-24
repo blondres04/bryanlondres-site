@@ -19,10 +19,10 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-paper/90 backdrop-blur">
-      <Container className="flex items-center justify-between gap-3 py-2.5">
-        <Link href="/" className="flex items-center gap-2.5" aria-label={AppConfig.name}>
-          <Monogram size={38} />
-          <span className="font-display text-lg font-semibold tracking-tight max-[380px]:sr-only">
+      <Container className="flex items-center justify-between gap-2 py-2.5">
+        <Link href="/" className="flex shrink-0 items-center gap-2" aria-label={AppConfig.name}>
+          <Monogram size={36} />
+          <span className="font-display text-base font-semibold tracking-tight whitespace-nowrap max-[359px]:sr-only">
             {AppConfig.name}
           </span>
         </Link>
@@ -35,11 +35,11 @@ export const Header = () => {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2">
           <LocaleSwitcher />
           <a
             href={ctaHref}
-            className={`${buttonClasses('primary', 'md')} !min-h-10 !px-4 !py-1.5 text-sm`}
+            className={`${buttonClasses('primary', 'md')} !min-h-10 !px-3.5 !py-1.5 text-sm whitespace-nowrap`}
           >
             {t('cta')}
           </a>

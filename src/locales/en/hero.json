@@ -11,12 +11,13 @@
   "price_founding": "$300",
   "price_regular_prefix": "regular price",
   "price_regular": "$400",
-  "price_note": "Fixed price, published here. In exchange, your honest feedback and permission to show the work.",
+  "price_note": "Fixed price, published here. Once I take my first 5 clients, the price becomes $400. If you start before then, your $300 stays fixed. In exchange, your honest feedback and permission to show the work.",
   "step1_title": "Tell me about your business",
   "step1_text": "One short message. I draft your page in 48 hours, free.",
   "step2_title": "You look and decide",
   "step2_text": "If you don't like it, you pay nothing.",
   "step3_title": "Approve and pay",
   "step3_text": "$100 deposit on approval. The balance at launch.",
-  "honest": "I'm taking my first 5 clients. I don't have reviews yet. That's why you only pay after you approve."
+  "honest": "I'm taking my first 5 clients. I don't have reviews yet. That's why you only pay after you approve.",
+  "price_chip": "Founding price, first 5 clients. After that, $400."
 }

@@ -12,15 +12,19 @@ export const Hero = () => {
         aria-hidden="true"
         className="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-mango-soft blur-3xl"
       />
-      <Container className="relative grid gap-10 py-10 sm:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-14 lg:py-24">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-32 -left-24 h-72 w-72 rounded-full bg-bay-soft opacity-70 blur-3xl"
+      />
+      <Container className="relative grid gap-10 py-7 sm:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-14 lg:py-24">
         <div>
           <Badge tone="mango">{t('eyebrow')}</Badge>
-          <h1 className="mt-5 text-[2.35rem] leading-[1.08] font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="mt-4 text-[2.15rem] leading-[1.08] font-semibold tracking-tight sm:text-5xl lg:text-6xl">
             {t('title')}
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-muted sm:text-xl">{t('subtitle')}</p>
+          <p className="mt-3 max-w-xl text-base text-muted sm:text-xl">{t('subtitle')}</p>
 
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
             <Button href="#contact" size="lg" variant="primary">
               {t('cta_primary')}
             </Button>
@@ -29,6 +33,14 @@ export const Hero = () => {
             </Button>
           </div>
           <p className="mt-3 text-sm text-muted">{t('cta_note')}</p>
+          <p className="mt-4 flex items-center gap-3 rounded-2xl border border-mango bg-mango-soft px-4 py-3 lg:hidden">
+            <span className="font-display text-4xl leading-none font-semibold tracking-tight">
+              {t('price_founding')}
+            </span>
+            <span className="text-sm leading-snug font-semibold text-ink">
+              {t('price_chip')}
+            </span>
+          </p>
 
           <div className="mt-7 flex items-start gap-3 border-t border-line pt-5">
             <span aria-hidden="true" className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-bay" />

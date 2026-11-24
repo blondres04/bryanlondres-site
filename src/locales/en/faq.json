@@ -1,9 +1,49 @@
 {
-  "title": "Frequently asked questions",
-  "q1": "Sample question one?",
-  "a1": "Sample answer one.",
-  "q2": "Sample question two?",
-  "a2": "Sample answer two.",
-  "q3": "Sample question three?",
-  "a3": "Sample answer three."
+  "eyebrow": "Frequently asked questions",
+  "title": "What most owners ask first",
+  "intro": "Straight answers, no fine print. If yours is not here, ask me and I will answer it myself.",
+  "items": {
+    "hasSite": {
+      "q": "I already have a website. Why would I need this?",
+      "a": "If yours already brings in customers, leave it alone. But if it loads slowly on a phone, is only in English, or nobody ever contacts you through it, I will make you a free draft to compare. You decide if mine is better."
+    },
+    "trustAi": {
+      "q": "I do not trust AI. Who writes my page?",
+      "a": "I do. I use artificial intelligence as a tool, but I review every word before you see it. My day job is building AI systems and testing them so they do not make things up, and I bring the same care to your business. You talk to me, not to a robot."
+    },
+    "dislikeDraft": {
+      "q": "What if I do not like the draft?",
+      "a": "You pay nothing. The first draft, built around your own business, is free and arrives within 48 hours. Only if you approve it do we move on to the $100 deposit. If it does not convince you, we part as friends and the draft costs you nothing."
+    },
+    "domain": {
+      "q": "Who owns the domain and the page?",
+      "a": "You do. The domain, the page and the accounts are in your name from day one. If you ever want to work with someone else, you take everything with you."
+    },
+    "tech": {
+      "q": "Do I need to know technology?",
+      "a": "No. You send me the basics of your business by message or through the form: what you do, where you are, your hours and your services. I handle the rest and explain it in plain words."
+    },
+    "spanish": {
+      "q": "Will my page and my customers' messages be in Spanish?",
+      "a": "Yes. The page is written Spanish first, not translated from English, and it can also have an English version for those who need it. That way each customer can write to you in the language they prefer, and you can answer the same way."
+    },
+    "afterSeven": {
+      "q": "What happens after the 7 days?",
+      "a": "By then your page is live and in your name. You owe nothing more to keep it running. If you want me to keep looking after it, there is an optional plan at $75 a month; if you would rather not, the page is yours either way."
+    },
+    "monthly": {
+      "q": "How much does it cost per month?",
+      "a": "The page is a one-time price: $300 for my first 5 clients and $400 regular. There is no required monthly fee. The $75 a month care plan is optional. The domain is paid separately, straight to the registrar, and stays in your name."
+    },
+    "noReviews": {
+      "q": "Do you have clients or reviews I can look at?",
+      "a": "Not yet. I am taking my first 5 clients, and I would rather tell you that plainly than make anything up. That is why the first draft is free and you only pay if you approve it. What you can check is who I am: my LinkedIn and GitHub are at the bottom of the page."
+    }
+  },
+  "closing": {
+    "title": "Another question?",
+    "text": "I am taking my first 5 clients and I do not have reviews yet. That is why you only pay after you approve your draft.",
+    "cta": "See your page before you pay",
+    "emailLead": "Prefer to write to me directly? My email is"
+  }
 }

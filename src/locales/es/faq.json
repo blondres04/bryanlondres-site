@@ -1,9 +1,49 @@
 {
-  "title": "Preguntas frecuentes",
-  "q1": "¿Pregunta de ejemplo uno?",
-  "a1": "Respuesta de ejemplo uno.",
-  "q2": "¿Pregunta de ejemplo dos?",
-  "a2": "Respuesta de ejemplo dos.",
-  "q3": "¿Pregunta de ejemplo tres?",
-  "a3": "Respuesta de ejemplo tres."
+  "eyebrow": "Preguntas frecuentes",
+  "title": "Lo que casi todos los dueños preguntan primero",
+  "intro": "Respuestas directas, sin letra pequeña. Si la suya no está aquí, pregúnteme y yo mismo le contesto.",
+  "items": {
+    "hasSite": {
+      "q": "Ya tengo página web. ¿Para qué me sirve esto?",
+      "a": "Si la suya ya le trae clientes, no cambie nada. Pero si carga lento en el teléfono, solo está en inglés o nadie le escribe desde ella, le hago un borrador gratis para que compare. Usted decide si el mío es mejor."
+    },
+    "trustAi": {
+      "q": "No confío en la IA. ¿Quién escribe mi página?",
+      "a": "Yo. Uso inteligencia artificial como herramienta, pero cada palabra la reviso yo antes de que usted la vea. Mi trabajo diario es construir sistemas con IA y probarlos para que no inventen cosas, y a su negocio le aplico el mismo cuidado. Usted habla conmigo, no con un robot."
+    },
+    "dislikeDraft": {
+      "q": "¿Y si no me gusta el borrador?",
+      "a": "No paga nada. El primer borrador, de su propio negocio, es gratis y lo recibe en 48 horas. Solo si lo aprueba pagamos el depósito de $100. Si no le convence, nos despedimos como amigos y el borrador no le cuesta un centavo."
+    },
+    "domain": {
+      "q": "¿Quién es dueño del dominio y de la página?",
+      "a": "Usted. El dominio, la página y las cuentas quedan a su nombre desde el primer día. Si algún día quiere irse con otra persona, se lleva todo."
+    },
+    "tech": {
+      "q": "¿Necesito saber de tecnología?",
+      "a": "No. Me manda por mensaje o por el formulario lo básico de su negocio: qué hace, dónde está, su horario y sus servicios. Yo me encargo de lo demás y se lo explico en palabras normales."
+    },
+    "spanish": {
+      "q": "¿Mi página y los mensajes de mis clientes van en español?",
+      "a": "Sí. La página se escribe primero en español, no se traduce del inglés, y también puede tener versión en inglés para quien la necesite. Así cada cliente le escribe en el idioma que prefiera, y usted le responde igual."
+    },
+    "afterSeven": {
+      "q": "¿Qué pasa después de los 7 días?",
+      "a": "Para entonces su página ya está publicada y a su nombre. No tiene que pagar nada más para que siga funcionando. Si quiere que yo siga cuidándola, hay un plan opcional de $75 al mes; si prefiere no tenerlo, la página es suya igual."
+    },
+    "monthly": {
+      "q": "¿Cuánto cuesta al mes?",
+      "a": "El precio de la página es único: $300 para mis primeros 5 clientes y $400 el precio regular. No hay mensualidad obligatoria. El plan de cuidado de $75 al mes es opcional. El dominio se paga aparte, directo al registrador, y queda a su nombre."
+    },
+    "noReviews": {
+      "q": "¿Tiene clientes o reseñas que pueda ver?",
+      "a": "Todavía no. Estoy tomando mis primeros 5 clientes y prefiero decírselo claro que inventar nada. Por eso el primer borrador es gratis y solo paga si lo aprueba. Lo que sí puede comprobar es quién soy: mi perfil en LinkedIn y mi GitHub están al final de la página."
+    }
+  },
+  "closing": {
+    "title": "¿Otra pregunta?",
+    "text": "Estoy tomando mis primeros 5 clientes y todavía no tengo reseñas. Por eso solo paga después de aprobar su borrador.",
+    "cta": "Vea su página antes de pagar",
+    "emailLead": "¿Prefiere escribirme directo? Mi correo es"
+  }
 }
