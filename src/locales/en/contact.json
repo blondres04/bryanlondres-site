@@ -1,7 +1,7 @@
 {
   "eyebrow": "Free first draft",
   "title": "See your page before you pay",
-  "intro": "Tell me about your business. Within 48 hours I show you a first draft of your own page, free. If you do not like it, you owe nothing. If you do, the deposit is $100 and the balance is due at launch.",
+  "intro": "Tell me about your business. In 48 hours I show you a first draft of your own page, free.",
   "promise": "I reply personally within 48 hours.",
   "name": "Your name",
   "business": "Your business",
@@ -23,7 +23,7 @@
   "error_generic": "I could not send the form. Please try again or email me below.",
   "email_prompt": "Prefer to write directly?",
   "email_link": "bryanlondres5@gmail.com",
-  "fine_print": "No account, no card, no commitment. I have no clients or reviews yet, so you only pay after you approve.",
+  "fine_print": "No account, no card, no commitment.",
   "step1": "Tell me about your business below, in two minutes.",
   "step2": "Within 48 hours I show you a draft of your own page. Free.",
   "step3": "If you like it, you pay a $100 deposit. If not, you owe nothing.",
@@ -33,7 +33,6 @@
   "error_email": "Please enter a valid email, for example name@mail.com.",
   "error_message": "Tell me a bit more, at least a short sentence.",
   "success_email": "Anything urgent? Email me at",
-  "founding": "Founding price: $300 for my first 5 clients, then $400. Published, no surprises.",
   "privacy": "I only use your details to reply to you. I do not share them.",
   "email_subject": "I want to see my page before paying"
 }

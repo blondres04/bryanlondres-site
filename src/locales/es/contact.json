@@ -1,7 +1,7 @@
 {
   "eyebrow": "Primer borrador gratis",
   "title": "Vea su página antes de pagar",
-  "intro": "Cuénteme de su negocio. En 48 horas le muestro un primer borrador de su propia página, gratis. Si no le gusta, no debe nada. Si le gusta, el depósito es de $100 y el resto se paga al publicar.",
+  "intro": "Cuénteme de su negocio. En 48 horas le muestro un primer borrador de su propia página, gratis.",
   "promise": "Le respondo personalmente en un máximo de 48 horas.",
   "name": "Su nombre",
   "business": "Su negocio",
@@ -23,7 +23,7 @@
   "error_generic": "No pude enviar el formulario. Intente de nuevo o escríbame al email de abajo.",
   "email_prompt": "¿Prefiere escribir directo?",
   "email_link": "bryanlondres5@gmail.com",
-  "fine_print": "Sin cuenta, sin tarjeta, sin compromiso. Aún no tengo clientes ni reseñas, por eso solo paga después de aprobar.",
+  "fine_print": "Sin cuenta, sin tarjeta, sin compromiso.",
   "step1": "Me cuenta de su negocio aquí abajo, en dos minutos.",
   "step2": "En 48 horas le muestro un borrador de su propia página. Gratis.",
   "step3": "Si le gusta, deposite $100. Si no, no debe nada.",
@@ -33,7 +33,6 @@
   "error_email": "Escriba un email válido, por ejemplo nombre@correo.com.",
   "error_message": "Cuénteme un poco más, al menos una frase corta.",
   "success_email": "¿Algo urgente? Escríbame a",
-  "founding": "Precio de lanzamiento: $300 para mis primeros 5 clientes, luego $400. Publicado, sin sorpresas.",
   "privacy": "Solo uso sus datos para responderle. No se los doy a nadie.",
   "email_subject": "Quiero ver mi página antes de pagar"
 }

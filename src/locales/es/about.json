@@ -1,11 +1,9 @@
 {
-  "eyebrow": "Quién soy",
-  "title": "Usted habla conmigo, y yo mismo lo construyo",
+  "eyebrow": "Sobre mí",
+  "title": "Un ingeniero de Miami, no una agencia",
   "place": "Miami, Florida",
   "p1": "Soy Bryan Londres, ingeniero de Miami. Soy de la primera generación de mi familia en ser ingeniero y me gradué de Ciencias de la Computación en FIU en 2026. Hablo español e inglés, así que su página queda escrita en los dos desde el principio, no traducida después.",
   "p2": "En mi trabajo mantengo software de producción que una empresa usa todos los días y manejo su nube. También construyo sistemas con inteligencia artificial y los pruebo para que no digan cosas que no deben. Eso mismo hago con su página: yo la hago, y usted no tiene que explicarle nada a un intermediario.",
-  "honest_badge": "Sin letra chiquita",
-  "honest": "Estoy tomando mis primeros 5 clientes. Aún no tengo reseñas. Por eso usted solo paga después de aprobar su primer borrador.",
   "fact1_title": "Ingeniero de profesión",
   "fact1_text": "Líder de equipo. Construyo con Claude, IA con pruebas de seguridad y software que se usa todos los días.",
   "fact2_title": "Graduado de FIU",
@@ -16,11 +14,14 @@
   "fact4_text": "Español primero, inglés igual de cuidado.",
   "linkedin_aria": "LinkedIn de Bryan Londres, se abre en otra pestaña",
   "github_aria": "GitHub de Bryan Londres, se abre en otra pestaña",
-  "email_label": "Escríbame por correo",
   "role": "Ingeniero de IA y software",
-  "honest_1": "Precio de fundador para esos 5: $300 en vez de $400.",
-  "honest_2": "Le hago su primer borrador gratis, en 48 horas, con su propio negocio.",
-  "honest_3": "Usted paga $100 solo después de aprobarlo. Si no le gusta, no debe nada.",
   "check_title": "Compruébelo usted mismo",
-  "check_text": "Todo lo que digo aquí se puede verificar. Mire mi LinkedIn y mi GitHub antes de escribirme."
+  "check_text": "Todo lo que digo aquí se puede revisar antes de que me escriba.",
+  "linkedin_name": "LinkedIn",
+  "linkedin_what": "Mis estudios y mi trabajo, con mi nombre.",
+  "github_name": "GitHub",
+  "github_what": "Mi código público, con fecha de cada cambio.",
+  "repo_name": "El código de esta página",
+  "repo_what": "Esta misma página es pública en GitHub. Puede leerla entera.",
+  "repo_aria": "Código de esta página en GitHub, se abre en otra pestaña"
 }

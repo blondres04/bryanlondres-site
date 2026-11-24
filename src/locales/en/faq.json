@@ -39,11 +39,5 @@
       "q": "Do you have clients or reviews I can look at?",
       "a": "Not yet. I am taking my first 5 clients, and I would rather tell you that plainly than make anything up. That is why the first draft is free and you only pay if you approve it. What you can check is who I am: my LinkedIn and GitHub are at the bottom of the page."
     }
-  },
-  "closing": {
-    "title": "Another question?",
-    "text": "I am taking my first 5 clients and I do not have reviews yet. That is why you only pay after you approve your draft.",
-    "cta": "See your page before you pay",
-    "emailLead": "Prefer to write to me directly? My email is"
   }
 }

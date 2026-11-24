@@ -1,34 +1,41 @@
 import { useTranslations } from 'next-intl';
 
-const linkClass =
-  'inline-flex min-h-11 items-center rounded-full border border-bay px-5 py-2 font-semibold text-bay transition-colors hover:bg-bay hover:text-paper';
+const ITEMS = [
+  {
+    key: 'linkedin',
+    href: 'https://www.linkedin.com/in/bryanlondres',
+  },
+  { key: 'github', href: 'https://github.com/blondres04' },
+  {
+    key: 'repo',
+    href: 'https://github.com/blondres04/bryanlondres-site',
+  },
+] as const;
+
+const cardClass =
+  'group flex min-h-11 flex-col rounded-2xl border border-bay/30 bg-card p-4 transition-colors hover:border-bay hover:bg-bay-soft focus-visible:outline-2';
 
 export const Links = () => {
   const t = useTranslations('about');
 
   return (
-    <div className="mt-4 flex flex-wrap gap-3">
-      <a
-        className={linkClass}
-        href="https://linkedin.com/in/bryanlondres"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={t('linkedin_aria')}
-      >
-        LinkedIn
-      </a>
-      <a
-        className={linkClass}
-        href="https://github.com/blondres04"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={t('github_aria')}
-      >
-        GitHub
-      </a>
-      <a className={linkClass} href="mailto:bryanlondres5@gmail.com">
-        {t('email_label')}
-      </a>
-    </div>
+    <ul className="mt-4 grid gap-3 sm:grid-cols-3">
+      {ITEMS.map(({ key, href }) => (
+        <li key={key} className="flex">
+          <a
+            className={`${cardClass} w-full`}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={t(`${key}_aria`)}
+          >
+            <span className="font-semibold text-bay">
+              {t(`${key}_name`)} <span aria-hidden="true">↗</span>
+            </span>
+            <span className="mt-1 text-sm text-muted">{t(`${key}_what`)}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 };

@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
-import { Button, Container, Monogram } from '@/components/ui';
+import { Container, Monogram } from '@/components/ui';
 import { AppConfig } from '@/utils/AppConfig';
 
 const EMAIL = 'bryanlondres5@gmail.com';
@@ -14,7 +14,7 @@ export const Footer = () => {
   const t = useTranslations('footer');
 
   return (
-    <footer data-section="footer" className="border-t-4 border-mango bg-bay text-paper">
+    <footer data-section="footer" className="border-t-4 border-mango bg-ink text-paper">
       <Container className="py-12">
         <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
           <div>
@@ -24,10 +24,6 @@ export const Footer = () => {
             </div>
             <p className="mt-4 max-w-sm text-paper/85">{t('tagline')}</p>
             <p className="mt-4 text-sm font-medium text-paper">{t('area')}</p>
-            <p className="mt-2 max-w-sm text-sm text-paper/80">{t('honest')}</p>
-            <Button href="#contact" className="mt-5">
-              {t('cta')}
-            </Button>
           </div>
 
           <nav aria-label={t('contact_label')}>

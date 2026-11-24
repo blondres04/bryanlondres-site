@@ -1,13 +1,13 @@
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
 import { useLocale, useTranslations } from 'next-intl';
+import type { FormEvent } from 'react';
 import { useEffect, useRef, useState } from 'react';
-import { useForm } from 'react-hook-form';
 import { submitIntake } from '@/app/actions/intake';
 import { buttonClasses, Container, SectionHeading } from '@/components/ui';
 import type { IntakeInput } from '@/validations/IntakeValidation';
-import { IntakeValidation, PREFERRED_LANGUAGES } from '@/validations/IntakeValidation';
+import type { IntakeErrors } from '@/validations/IntakeClient';
+import { PREFERRED_LANGUAGES, validateIntake } from '@/validations/IntakeClient';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
@@ -65,25 +65,17 @@ export const Contact = () => {
     }
   }, [status]);
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<IntakeInput>({
-    resolver: zodResolver(IntakeValidation),
-    defaultValues: {
-      name: '',
-      business: '',
-      phone: '',
-      email: '',
-      message: '',
-      preferredLanguage: locale === 'en' ? 'en' : 'es',
-      botField: '',
-    },
-  });
+  const [errors, setErrors] = useState<IntakeErrors>({});
 
-  const onSubmit = handleSubmit(async (values) => {
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const { values, errors: found } = validateIntake(new FormData(event.currentTarget));
+    setErrors(found);
+
+    if (Object.keys(found).length > 0 || values.botField !== '') {
+      return;
+    }
+
     setStatus('sending');
 
     try {
@@ -96,11 +88,10 @@ export const Contact = () => {
 
       await postToNetlifyForms(values);
       setStatus('success');
-      reset();
     } catch {
       setStatus('error');
     }
-  });
+  };
 
   const hasErrors = Object.keys(errors).length > 0;
 
@@ -108,40 +99,48 @@ export const Contact = () => {
     <section
       id="contact"
       data-section="contact"
-      className="scroll-mt-16 bg-paper-2 py-16 sm:py-24"
+      className="scroll-mt-16 bg-bay py-16 text-paper sm:py-24"
     >
       <Container>
-        <div className="mx-auto max-w-2xl">
-          <SectionHeading eyebrow={t('eyebrow')} title={t('title')} intro={t('intro')} />
-          <p className="mt-4 inline-block rounded-full bg-bay-soft px-4 py-1.5 text-sm font-semibold text-bay">
-            {t('promise')}
-          </p>
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-16">
+          <div className="lg:sticky lg:top-24">
+            <SectionHeading tone="light" eyebrow={t('eyebrow')} title={t('title')} intro={t('intro')} />
+            <p className="mt-5 inline-block rounded-full bg-mango px-4 py-1.5 text-sm font-bold text-ink">
+              {t('promise')}
+            </p>
 
-          <p className="mt-3 text-sm text-muted">{t('founding')}</p>
+            <ol className="mt-8 space-y-4">
+              {(['step1', 'step2', 'step3'] as const).map((k, i) => (
+                <li key={k} className="flex items-start gap-3 text-base text-paper/90">
+                  <span
+                    aria-hidden="true"
+                    className="flex size-8 shrink-0 items-center justify-center rounded-full border-2 border-mango text-sm font-bold text-mango"
+                  >
+                    {i + 1}
+                  </span>
+                  <span className="pt-0.5">{t(k)}</span>
+                </li>
+              ))}
+            </ol>
 
-          <ol className="mt-6 grid gap-3 sm:grid-cols-3">
-            {(['step1', 'step2', 'step3'] as const).map((k, i) => (
-              <li
-                key={k}
-                className="flex items-start gap-3 rounded-xl border border-line bg-card p-4 text-sm text-ink"
+            <p className="mt-8 text-base text-paper/90">
+              {t('email_prompt')}{' '}
+              <a
+                href={mailto}
+                className="inline-flex min-h-11 items-center font-semibold text-paper underline decoration-mango underline-offset-4 hover:text-mango"
               >
-                <span
-                  aria-hidden="true"
-                  className="flex size-7 shrink-0 items-center justify-center rounded-full bg-bay text-sm font-bold text-white"
-                >
-                  {i + 1}
-                </span>
-                <span>{t(k)}</span>
-              </li>
-            ))}
-          </ol>
+                {t('email_link')}
+              </a>
+            </p>
+          </div>
 
+          <div>
           {status === 'success' ? (
             <div
               ref={successRef}
               tabIndex={-1}
               role="status"
-              className="mt-8 scroll-mt-24 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bay rounded-(--radius-card) border-2 border-bay bg-card p-6 shadow-card"
+              className="scroll-mt-24 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bay rounded-(--radius-card) border-2 border-mango bg-card p-6 text-ink shadow-card"
             >
               <p className="font-display text-2xl font-semibold text-bay">{t('success_title')}</p>
               <p className="mt-2 text-ink">{t('success')}</p>
@@ -157,7 +156,7 @@ export const Contact = () => {
               onSubmit={onSubmit}
               noValidate
               aria-busy={status === 'sending'}
-              className="mt-8 space-y-5 rounded-(--radius-card) border border-line bg-card p-5 shadow-card sm:p-8"
+              className="space-y-5 rounded-(--radius-card) border border-line bg-card p-5 text-ink shadow-card sm:p-8"
             >
               {hasErrors && (
                 <p role="alert" className="font-semibold text-brand">
@@ -175,7 +174,7 @@ export const Contact = () => {
                     </label>
                     <input
                       id={`f-${name}`}
-                      {...register(name)}
+                      name={name}
                       type={type}
                       autoComplete={autoComplete}
                       inputMode={inputMode}
@@ -210,7 +209,7 @@ export const Contact = () => {
                 </label>
                 <textarea
                   id="f-message"
-                  {...register('message')}
+                  name="message"
                   rows={4}
                   autoComplete="off"
                   enterKeyHint="send"
@@ -233,7 +232,7 @@ export const Contact = () => {
                 <label htmlFor="f-lang" className={labelClass}>
                   {t('preferred_language')}
                 </label>
-                <select id="f-lang" {...register('preferredLanguage')} className={inputClass}>
+                <select id="f-lang" name="preferredLanguage" defaultValue={locale === 'en' ? 'en' : 'es'} className={inputClass}>
                   {PREFERRED_LANGUAGES.map((lang) => (
                     <option key={lang} value={lang}>
                       {t(`language_${lang}`)}
@@ -246,7 +245,7 @@ export const Contact = () => {
               <div aria-hidden="true" className="hidden">
                 <label>
                   Leave empty
-                  <input {...register('botField')} type="text" tabIndex={-1} autoComplete="off" />
+                  <input name="botField" type="text" tabIndex={-1} autoComplete="off" />
                 </label>
               </div>
 
@@ -269,15 +268,7 @@ export const Contact = () => {
             </form>
           )}
 
-          <p className="mt-6 text-base text-ink">
-            {t('email_prompt')}{' '}
-            <a
-              href={mailto}
-              className="font-semibold text-brand underline underline-offset-4 hover:text-brand-dark"
-            >
-              {t('email_link')}
-            </a>
-          </p>
+          </div>
         </div>
       </Container>
     </section>

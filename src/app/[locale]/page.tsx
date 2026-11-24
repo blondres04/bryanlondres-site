@@ -12,6 +12,7 @@ import {
   Offer,
   Problem,
 } from '@/components/sections';
+import { Divider } from '@/components/ui';
 
 export default async function Home(props: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await props.params;
@@ -23,11 +24,14 @@ export default async function Home(props: { params: Promise<{ locale: Locale }> 
       <main>
         <Hero />
         <Problem />
-        <Offer />
-        <HowItWorks />
+        <Divider from="paper" to="bay" />
         <Demo />
+        <Divider from="bay" to="paper" />
+        <HowItWorks />
+        <Offer />
         <About />
         <Faq />
+        <Divider from="paper2" to="bay" />
         <Contact />
       </main>
       <Footer />

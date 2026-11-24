@@ -51,7 +51,7 @@ export const HowItWorks = () => {
   const t = useTranslations('howItWorks');
 
   return (
-    <section id="how-it-works" data-section="howItWorks" className="scroll-mt-[5.5rem] py-16 sm:py-20">
+    <section id="how-it-works" data-section="howItWorks" className="scroll-mt-[5.5rem] bg-paper py-16 sm:py-24">
       <Container>
         <SectionHeading eyebrow={t('eyebrow')} title={t('title')} intro={t('intro')} />
         <ol className="relative z-0 mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">

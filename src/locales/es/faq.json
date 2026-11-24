@@ -39,11 +39,5 @@
       "q": "¿Tiene clientes o reseñas que pueda ver?",
       "a": "Todavía no. Estoy tomando mis primeros 5 clientes y prefiero decírselo claro que inventar nada. Por eso el primer borrador es gratis y solo paga si lo aprueba. Lo que sí puede comprobar es quién soy: mi perfil en LinkedIn y mi GitHub están al final de la página."
     }
-  },
-  "closing": {
-    "title": "¿Otra pregunta?",
-    "text": "Estoy tomando mis primeros 5 clientes y todavía no tengo reseñas. Por eso solo paga después de aprobar su borrador.",
-    "cta": "Vea su página antes de pagar",
-    "emailLead": "¿Prefiere escribirme directo? Mi correo es"
   }
 }

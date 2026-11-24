@@ -19,5 +19,22 @@
   "step3_title": "Approve and pay",
   "step3_text": "$100 deposit on approval. The balance at launch.",
   "honest": "I'm taking my first 5 clients. I don't have reviews yet. That's why you only pay after you approve.",
-  "price_chip": "Founding price, first 5 clients. After that, $400."
+  "price_chip": "Founding price, first 5 clients. After that, $400.",
+  "demo_label": "Demo: a fictional salon page and the alert to the owner",
+  "demo_name": "Demo Salon",
+  "demo_headline": "Your appointment, in Spanish or English",
+  "demo_sub": "Hialeah. We reply today.",
+  "demo_book": "Book now",
+  "demo_svc1": "Cut and blowout",
+  "demo_svc2": "Color",
+  "demo_svc3": "Nails",
+  "demo_ask": "Ask",
+  "demo_sms_label": "Alert to the owner",
+  "demo_sms": "New customer: María, wants an appointment Saturday",
+  "demo_caption": "Demo with a fictional business. Not a real client.",
+  "contact_prefix": "Or write me:",
+  "contact_email": "bryanlondres5@gmail.com",
+  "demo_link": "Try the live demo",
+  "demo_badge": "Demo",
+  "demo_now": "Now"
 }
