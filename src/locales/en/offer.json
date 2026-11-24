@@ -1,0 +1,10 @@
+{
+  "title": "The offer",
+  "card_name": "Sample package",
+  "price": "$000",
+  "price_note": "Sample price, one-time payment",
+  "item1": "First sample benefit",
+  "item2": "Second sample benefit",
+  "item3": "Third sample benefit",
+  "cta": "I want this package"
+}

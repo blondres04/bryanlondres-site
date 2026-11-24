@@ -1,0 +1,17 @@
+{
+  "title": "Contact",
+  "intro": "Leave your details and we will reply soon.",
+  "name": "Name",
+  "business": "Business",
+  "phone": "Phone",
+  "email": "Email",
+  "message": "Message",
+  "preferred_language": "Preferred language",
+  "language_es": "Spanish",
+  "language_en": "English",
+  "submit": "Send",
+  "sending": "Sending...",
+  "success": "Thank you, we received your message.",
+  "error_invalid": "Please check the highlighted fields.",
+  "error_generic": "We could not send the form. Please try again."
+}

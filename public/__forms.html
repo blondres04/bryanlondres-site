@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Netlify Forms skeleton</title>
+  </head>
+  <body>
+    <!--
+      Why this file exists: Netlify detects forms by scanning static HTML at deploy time.
+      The real form is rendered by React on the client, so Netlify never sees it. This hidden
+      skeleton declares the same form ("intake") with the same field names. The client then
+      POSTs url-encoded data to /__forms.html and Netlify Forms records it.
+      Keep the field names in sync with src/components/sections/Contact.tsx.
+    -->
+    <form name="intake" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="intake" />
+      <input name="name" />
+      <input name="business" />
+      <input name="phone" />
+      <input name="email" />
+      <textarea name="message"></textarea>
+      <input name="preferredLanguage" />
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+# Netlify with the Next.js runtime (OpenNext adapter, auto-detected).
+# Do not set a plugin here; Netlify installs the runtime for Next.js sites.
+# Set NEXT_PUBLIC_APP_URL (Site configuration, Environment variables) to the
+# canonical public URL, for example https://www.example.com. It is read at build
+# time for robots.txt, sitemap.xml and metadataBase. If unset, the build falls
+# back to the Netlify-provided URL, then DEPLOY_PRIME_URL, then localhost.
+[build]
+command = "npm run build"
+publish = ".next"
+
+[build.environment]
+NODE_VERSION = "22.18.0"
+NEXT_TELEMETRY_DISABLED = "1"

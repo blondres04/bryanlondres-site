@@ -1,0 +1,17 @@
+{
+  "title": "Contacto",
+  "intro": "Dejanos tus datos y te respondemos pronto.",
+  "name": "Nombre",
+  "business": "Negocio",
+  "phone": "Teléfono",
+  "email": "Email",
+  "message": "Mensaje",
+  "preferred_language": "Idioma preferido",
+  "language_es": "Español",
+  "language_en": "Inglés",
+  "submit": "Enviar",
+  "sending": "Enviando...",
+  "success": "Gracias, recibimos tu mensaje.",
+  "error_invalid": "Revisá los campos marcados.",
+  "error_generic": "No pudimos enviar el formulario. Intentá de nuevo."
+}
