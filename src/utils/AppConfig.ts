@@ -34,6 +34,8 @@ export const AppConfig = {
     localePrefix,
   },
   contact: {
+    // Public business email. Empty hides every email link on the site.
+    email: '',
     // TODO: set the real WhatsApp number in international format, digits only.
     whatsappNumber: '',
     // TODO: set the real phone number shown in the header.

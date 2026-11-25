@@ -3,7 +3,7 @@ import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { Container, Monogram } from '@/components/ui';
 import { AppConfig } from '@/utils/AppConfig';
 
-const EMAIL = 'bryanlondres5@gmail.com';
+const EMAIL = AppConfig.contact.email;
 const LINKEDIN = 'https://www.linkedin.com/in/bryanlondres';
 const GITHUB = 'https://github.com/blondres04';
 
@@ -31,11 +31,13 @@ export const Footer = () => {
               {t('contact_title')}
             </h2>
             <ul className="mt-2">
-              <li>
-                <a href={`mailto:${EMAIL}`} className={linkClass}>
-                  {EMAIL}
-                </a>
-              </li>
+              {EMAIL && (
+                <li>
+                  <a href={`mailto:${EMAIL}`} className={linkClass}>
+                    {EMAIL}
+                  </a>
+                </li>
+              )}
               <li>
                 <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className={linkClass}>
                   LinkedIn

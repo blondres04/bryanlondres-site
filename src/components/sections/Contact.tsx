@@ -7,11 +7,12 @@ import { submitIntake } from '@/app/actions/intake';
 import { buttonClasses, Container, SectionHeading } from '@/components/ui';
 import type { IntakeInput } from '@/validations/IntakeValidation';
 import type { IntakeErrors } from '@/validations/IntakeClient';
+import { AppConfig } from '@/utils/AppConfig';
 import { PREFERRED_LANGUAGES, validateIntake } from '@/validations/IntakeClient';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
-const EMAIL = 'bryanlondres5@gmail.com';
+const EMAIL = AppConfig.contact.email;
 
 const inputClass =
   'mt-1.5 block min-h-12 w-full rounded-xl border-2 border-line bg-card px-4 py-3 text-base text-ink focus:border-bay focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bay aria-[invalid=true]:border-brand';
@@ -123,15 +124,17 @@ export const Contact = () => {
               ))}
             </ol>
 
-            <p className="mt-8 text-base text-paper/90">
-              {t('email_prompt')}{' '}
-              <a
-                href={mailto}
-                className="inline-flex min-h-11 items-center font-semibold text-paper underline decoration-mango underline-offset-4 hover:text-mango"
-              >
-                {t('email_link')}
-              </a>
-            </p>
+            {EMAIL && (
+              <p className="mt-8 text-base text-paper/90">
+                {t('email_prompt')}{' '}
+                <a
+                  href={mailto}
+                  className="inline-flex min-h-11 items-center font-semibold text-paper underline decoration-mango underline-offset-4 hover:text-mango"
+                >
+                  {EMAIL}
+                </a>
+              </p>
+            )}
           </div>
 
           <div>
@@ -144,12 +147,14 @@ export const Contact = () => {
             >
               <p className="font-display text-2xl font-semibold text-bay">{t('success_title')}</p>
               <p className="mt-2 text-ink">{t('success')}</p>
-              <p className="mt-3 text-sm text-muted">
-                {t('success_email')}{' '}
-                <a href={mailto} className="font-semibold text-brand underline underline-offset-4">
-                  {EMAIL}
-                </a>
-              </p>
+              {EMAIL && (
+                <p className="mt-3 text-sm text-muted">
+                  {t('success_email')}{' '}
+                  <a href={mailto} className="font-semibold text-brand underline underline-offset-4">
+                    {EMAIL}
+                  </a>
+                </p>
+              )}
             </div>
           ) : (
             <form

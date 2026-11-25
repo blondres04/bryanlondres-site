@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { PhoneDemo } from '@/components/hero/PhoneDemo';
 import { Badge, Button, Container } from '@/components/ui';
 import { Link } from '@/libs/I18nNavigation';
+import { AppConfig } from '@/utils/AppConfig';
 
 const STEPS = ['step1', 'step2', 'step3'] as const;
 
@@ -42,12 +43,14 @@ export const Hero = () => {
             {t('demo_link')}
             <span aria-hidden="true">&rarr;</span>
           </Link>
-          <p className="mt-1 hidden text-sm text-muted sm:block">
-            {t('contact_prefix')}{' '}
-            <a href={`mailto:${t('contact_email')}`} className="font-semibold text-ink underline decoration-brand decoration-2 underline-offset-2">
-              {t('contact_email')}
-            </a>
-          </p>
+          {AppConfig.contact.email && (
+            <p className="mt-1 hidden text-sm text-muted sm:block">
+              {t('contact_prefix')}{' '}
+              <a href={`mailto:${AppConfig.contact.email}`} className="font-semibold text-ink underline decoration-brand decoration-2 underline-offset-2">
+                {AppConfig.contact.email}
+              </a>
+            </p>
+          )}
           <p className="mt-2.5 flex items-center gap-3 rounded-2xl border border-mango bg-mango-soft px-4 py-1 lg:hidden">
             <span className="font-display text-2xl leading-none font-semibold tracking-tight">
               {t('price_founding')}
