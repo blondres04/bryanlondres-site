@@ -13,6 +13,8 @@ import { PREFERRED_LANGUAGES, validateIntake } from '@/validations/IntakeClient'
 type Status = 'idle' | 'sending' | 'success' | 'error';
 
 const EMAIL = AppConfig.contact.email;
+const PHONE = AppConfig.contact.phone;
+const PHONE_DISPLAY = AppConfig.contact.phoneDisplay;
 
 const inputClass =
   'mt-1.5 block min-h-12 w-full rounded-xl border-2 border-line bg-card px-4 py-3 text-base text-ink focus:border-bay focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bay aria-[invalid=true]:border-brand';
@@ -132,6 +134,17 @@ export const Contact = () => {
                   className="inline-flex min-h-11 items-center font-semibold text-paper underline decoration-mango underline-offset-4 hover:text-mango"
                 >
                   {EMAIL}
+                </a>
+              </p>
+            )}
+            {PHONE && (
+              <p className="mt-2 text-base text-paper/90">
+                {t('call_prompt')}{' '}
+                <a
+                  href={`tel:${PHONE}`}
+                  className="inline-flex min-h-11 items-center font-semibold text-paper underline decoration-mango underline-offset-4 hover:text-mango"
+                >
+                  {PHONE_DISPLAY}
                 </a>
               </p>
             )}

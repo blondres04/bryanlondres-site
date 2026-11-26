@@ -22,6 +22,7 @@
   "error_field": "This field is missing or incorrect.",
   "error_generic": "I could not send the form. Please try again in a minute.",
   "email_prompt": "Prefer to write directly?",
+  "call_prompt": "Prefer to call?",
   "fine_print": "No account, no card, no commitment.",
   "step1": "Tell me about your business below, in two minutes.",
   "step2": "Within 48 hours I show you a draft of your own page. Free.",

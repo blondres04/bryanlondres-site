@@ -4,6 +4,8 @@ import { Container, Monogram } from '@/components/ui';
 import { AppConfig } from '@/utils/AppConfig';
 
 const EMAIL = AppConfig.contact.email;
+const PHONE = AppConfig.contact.phone;
+const PHONE_DISPLAY = AppConfig.contact.phoneDisplay;
 const LINKEDIN = 'https://www.linkedin.com/in/bryanlondres';
 const GITHUB = 'https://github.com/blondres04';
 
@@ -35,6 +37,13 @@ export const Footer = () => {
                 <li>
                   <a href={`mailto:${EMAIL}`} className={linkClass}>
                     {EMAIL}
+                  </a>
+                </li>
+              )}
+              {PHONE && (
+                <li>
+                  <a href={`tel:${PHONE}`} className={linkClass}>
+                    {PHONE_DISPLAY}
                   </a>
                 </li>
               )}
