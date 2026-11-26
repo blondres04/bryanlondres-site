@@ -35,7 +35,7 @@ export const AppConfig = {
   },
   contact: {
     // Public business email. Empty hides every email link on the site.
-    email: '',
+    email: 'hola@bryanlondres.com',
     // TODO: set the real WhatsApp number in international format, digits only.
     whatsappNumber: '',
     // TODO: set the real phone number shown in the header.

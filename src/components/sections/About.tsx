@@ -24,6 +24,7 @@ export const About = () => {
             <SectionHeading eyebrow={t('eyebrow')} title={<span id="about-title">{t('title')}</span>} />
             <p className="mt-5 text-lg">{t('p1')}</p>
             <p className="mt-4 text-lg">{t('p2')}</p>
+            <p className="mt-4 text-lg font-semibold">{t('mission')}</p>
             <Facts />
             <h3 className="mt-8 font-display text-xl font-semibold">{t('check_title')}</h3>
             <p className="mt-2 text-base text-muted">{t('check_text')}</p>
